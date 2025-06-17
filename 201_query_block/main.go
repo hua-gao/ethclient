@@ -6,8 +6,9 @@ import (
 	"log"
 	"math/big"
 
+	ethutil "github.com/hua-gao/ethclient/utils"
+
 	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/hua-gao/ethclient/utils/ethutil"
 )
 
 func main() {
