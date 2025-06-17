@@ -1,0 +1,2 @@
+go get github.com/ethereum/go-ethereum@latest
+go get github.com/ethereum/go-ethereum/rpc@v1.15.11
