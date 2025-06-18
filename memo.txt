@@ -1,2 +1,22 @@
+下载依赖包
 go get github.com/ethereum/go-ethereum@latest
 go get github.com/ethereum/go-ethereum/rpc@v1.15.11
+
+安装 solc 工具
+npm install -g solc
+
+编译合约代码
+solcjs --bin Store.sol
+
+生成合约 abi 文件
+solcjs --abi Store.sol
+
+根据bin文件和abi文件生成go代码
+abigen --bin=Store_sol_Store.bin --abi=Store_sol_Store.abi --pkg=store --out=store.go
+
+
+//安装abigen工具
+go install github.com/ethereum/go-ethereum/cmd/abigen@latest
+
+solcjs --abi IERC20Metadata.sol
+abigen --abi=erc20_sol_ERC20.abi --pkg=token --out=erc20.go
