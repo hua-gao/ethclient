@@ -15,8 +15,6 @@ import (
 	"github.com/hua-gao/ethclient/utils"
 )
 
-//const erc20ABI = `[{"constant":true,"inputs":[{"name":"account","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"type":"function"}]`
-
 func main() {
 	RPC_URL := utils.GetEnvParam("SEPOLIA_RPC_URL")
 	client, err := ethclient.Dial(RPC_URL)

@@ -37,11 +37,11 @@ func main() {
 	fmt.Println(receiptByHash[0] == receiptsByNum[0]) // true
 
 	for _, receipt := range receiptByHash {
-		fmt.Println("Status:", receipt.Status)                         // 1
-		fmt.Println("Logs:", receipt.Logs)                             // []
-		fmt.Println("TxHash:", receipt.TxHash.Hex())                   // 0x20294a03e8766e9aeab58327fc4112756017c6c28f6f99c7722f4a29075601c5
-		fmt.Println("TransactionIndex:", receipt.TransactionIndex)     // 0
-		fmt.Println("ContractAddress:", receipt.ContractAddress.Hex()) // 0x0000000000000000000000000000000000000000
+		fmt.Println("Status:", receipt.Status)
+		fmt.Println("Logs:", receipt.Logs)
+		fmt.Println("TxHash:", receipt.TxHash.Hex())
+		fmt.Println("TransactionIndex:", receipt.TransactionIndex)
+		fmt.Println("ContractAddress:", receipt.ContractAddress.Hex())
 		break
 	}
 
@@ -50,9 +50,9 @@ func main() {
 	if err != nil {
 		log.Println("get transactionReceipt error:", err)
 	}
-	fmt.Println(receipt.Status)                // 1
-	fmt.Println(receipt.Logs)                  // []
-	fmt.Println(receipt.TxHash.Hex())          // 0x20294a03e8766e9aeab58327fc4112756017c6c28f6f99c7722f4a29075601c5
-	fmt.Println(receipt.TransactionIndex)      // 0
-	fmt.Println(receipt.ContractAddress.Hex()) // 0x0000000000000000000000000000000000000000
+	fmt.Println(receipt.Status)
+	fmt.Println(receipt.Logs)
+	fmt.Println(receipt.TxHash.Hex())
+	fmt.Println(receipt.TransactionIndex)
+	fmt.Println(receipt.ContractAddress.Hex())
 }

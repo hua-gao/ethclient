@@ -36,16 +36,16 @@ func main() {
 	}
 
 	for _, tx := range block.Transactions() {
-		fmt.Println(tx.Hash().Hex())        // 0x75ca51c5e32dd0d4c6b77fc9cedebe578aa92fb9a41eb5b9fa6e1c894d14825b
-		fmt.Println(tx.Value().String())    // 50000000000000000
-		fmt.Println(tx.Gas())               // 22000
-		fmt.Println(tx.GasPrice().Uint64()) // 8000000064
-		fmt.Println(tx.Nonce())             // 14855452
-		fmt.Println(tx.Data())              // []
-		fmt.Println(tx.To().Hex())          // 0xFfa9e095ddA63a15a2e376E44d6F9Fc72E1b6953
+		fmt.Println(tx.Hash().Hex())
+		fmt.Println(tx.Value().String())
+		fmt.Println(tx.Gas())
+		fmt.Println(tx.GasPrice().Uint64())
+		fmt.Println(tx.Nonce())
+		fmt.Println(tx.Data())
+		fmt.Println(tx.To().Hex())
 
 		if sender, err := types.Sender(types.NewEIP155Signer(chainID), tx); err == nil {
-			fmt.Println("sender", sender.Hex()) // 0x2CdA41645F2dBffB852a605E92B185501801FC28
+			fmt.Println("sender", sender.Hex())
 		} else {
 			log.Println("get sender error:", err)
 		}
@@ -53,8 +53,8 @@ func main() {
 		if err != nil {
 			log.Println("get receipt error:", err)
 		}
-		fmt.Println(receipt.Status) // 1
-		fmt.Println(receipt.Logs)   // []
+		fmt.Println(receipt.Status)
+		fmt.Println(receipt.Logs)
 		break
 	}
 
@@ -70,7 +70,7 @@ func main() {
 			log.Println("get transation in block error:", err)
 		}
 
-		fmt.Println(tx.Hash().Hex()) // 0x20294a03e8766e9aeab58327fc4112756017c6c28f6f99c7722f4a29075601c5
+		fmt.Println(tx.Hash().Hex())
 		break
 	}
 
