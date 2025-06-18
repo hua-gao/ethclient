@@ -21,10 +21,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// privateKey, err := crypto.GenerateKey()
-	// privateKeyBytes := crypto.FromECDSA(privateKey)
-	// privateKeyHex := hex.EncodeToString(privateKeyBytes)
-	// fmt.Println("Private Key:", privateKeyHex)
 	privateKey, err := crypto.HexToECDSA(utils.GetEnvParam("PRIVATE_KEY_1"))
 	if err != nil {
 		log.Fatal(err)
@@ -67,8 +63,8 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Println(address.Hex())
-	fmt.Println(tx.Hash().Hex())
+	fmt.Println("contract addr:", address.Hex())
+	fmt.Println("transation hashcode:", tx.Hash().Hex())
 
 	_ = instance
 }
