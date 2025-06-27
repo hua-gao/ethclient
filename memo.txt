@@ -4,6 +4,8 @@ go get github.com/ethereum/go-ethereum/rpc@v1.15.11
 
 安装 solc 工具
 npm install -g solc
+或
+go install github.com/ethereum/go-ethereum/cmd/abigen@latest
 
 编译合约代码
 solcjs --bin Store.sol
